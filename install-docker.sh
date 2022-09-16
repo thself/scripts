@@ -1,6 +1,6 @@
 sudo apt-get update
 
-echo "Done!"
+echo "Update Done!"
  
 sudo apt-get install \
     ca-certificates \
@@ -8,30 +8,29 @@ sudo apt-get install \
     gnupg \
     lsb-release
 	
-echo "Done!"	
+echo "Certificates Done!"
 
 sudo mkdir -p /etc/apt/keyrings
 
-echo "Done!"
+echo "keyrings dir Done!"
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
-echo "Done!"
+echo "gpg Imported!"
 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
   
-echo "Done!"  
+echo "Docker-list Done!"
 
 sudo apt-get update
 
-echo "Done!"
+echo "Update Done!"
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
-echo "Done!"
-
+echo "Docker Installation Done!"
 
 echo "Post-installation steps..."
 
@@ -42,22 +41,3 @@ echo "Done!"
 sudo usermod -aG docker $USER
 
 echo "user added to docker group!"
-
-newgrp docker
-
-echo "newgrp done!"
-
-sleep 5
-
-sudo docker run hello-world
-
-echo "Done!"
-
-sudo systemctl enable docker.service
-
-echo "docker.service enabled!"
-
-sudo systemctl enable containerd.service
-
-echo "containerd.service enabled!"
-echo "Finished!"
