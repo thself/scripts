@@ -41,11 +41,13 @@ echo "Done!"
 
 sudo usermod -aG docker $USER
 
-echo "Done!"
+echo "user added to docker group!"
 
 newgrp docker
 
-echo "Done!"
+echo "newgrp done!"
+
+sleep 10
 
 docker run hello-world
 
@@ -53,8 +55,9 @@ echo "Done!"
 
 sudo systemctl enable docker.service
 
-echo "Done!"
+echo "docker.service enabled!"
 
 sudo systemctl enable containerd.service
 
+echo "containerd.service enabled!"
 echo "Finished!"
