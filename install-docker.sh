@@ -36,8 +36,21 @@ echo "Post-installation steps..."
 
 sudo groupadd docker
 
-echo "Done!"
+echo "Group added!"
 
 sudo usermod -aG docker $USER
 
 echo "user added to docker group!"
+
+sudo docker run hello-world
+
+echo "Docker is working!"
+
+sudo systemctl enable docker.service
+
+echo "docker.service enabled!"
+
+sudo systemctl enable containerd.service
+
+echo "containerd.service enabled!"
+echo "Finished!"
