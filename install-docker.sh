@@ -43,6 +43,8 @@ sudo usermod -aG docker $USER
 
 echo "user added to docker group!"
 
+exit
+
 newgrp docker
 
 echo "newgrp done!"
