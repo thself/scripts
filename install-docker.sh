@@ -49,7 +49,7 @@ newgrp docker
 
 echo "newgrp done!"
 
-sleep 10
+sleep 5
 
 sudo docker run hello-world
 
