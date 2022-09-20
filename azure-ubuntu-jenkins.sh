@@ -16,6 +16,6 @@ echo "Installation succesful!"
 echo
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
-sudo systemctl status jenkins
+sudo systemctl status jenkins > /dev/null
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 echo "<<<copy the string above and paste it to your browser>>>"
