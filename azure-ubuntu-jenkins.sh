@@ -1,4 +1,5 @@
 #!/bin/bash
+# run 'sudo su' before executing this script
 sudo apt update
 sudo apt install openjdk-11-jdk
 java -version
@@ -11,6 +12,11 @@ sudo apt install jenkins
 #sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9B7D32F2D50582E6
 systemctl start jenkins
 systemctl enable jenkins
+echo
+echo
+echo "Copy the string below and paste it to the Jenkins Web page:"
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+echo
+echo
 systemctl status jenkins
 
