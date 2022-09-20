@@ -1,7 +1,7 @@
 #!/bin/bash
 if type apt > /dev/null; then
     pkg_mgr=apt
-    if [ $(uname -v) == *Debian* or $(uname -v) == *Ubuntu* ]; then
+    if [ $(uname -v) == *Debian* ]; then
       java="default-jre"
     else
       java="openjdk-11-jre"
