@@ -16,6 +16,7 @@ echo
 echo
 echo "Copy the string below and paste it to the Jenkins Web page:"
 echo
+echo
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 echo
 echo
