@@ -1,12 +1,10 @@
 sudo apt-get update
 
 echo "Update Done!"
+
+# sudo apt install apt-transport-https ca-certificates curl software-properties-common
  
-sudo apt-get install \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release
+sudo apt-get install ca-certificates curl gnupg lsb-release
 	
 echo "Certificates Done!"
 
@@ -15,6 +13,7 @@ sudo mkdir -p /etc/apt/keyrings
 echo "keyrings dir Done!"
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 echo "gpg Imported!"
 
