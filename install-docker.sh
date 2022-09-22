@@ -6,11 +6,11 @@ echo "Update Done!"
  
 sudo apt-get install ca-certificates curl gnupg lsb-release -y
 	
-echo "Certificates Done!"
+echo "Certificates Installed!"
 
 sudo mkdir -p /etc/apt/keyrings
 
-echo "keyrings dir Done!"
+echo "keyrings dir made!"
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -21,7 +21,7 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
   
-echo "Docker-list Done!"
+echo "Docker-list Added to Update List!"
 
 sudo apt-get update
 
