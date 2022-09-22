@@ -4,7 +4,7 @@ echo "Update Done!"
 
 # sudo apt install apt-transport-https ca-certificates curl software-properties-common
  
-sudo apt-get install ca-certificates curl gnupg lsb-release
+sudo apt-get install ca-certificates curl gnupg lsb-release -y
 	
 echo "Certificates Done!"
 
