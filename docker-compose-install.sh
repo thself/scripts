@@ -11,3 +11,4 @@ echo
 echo "Done!"
 echo
 docker-compose --version
+echo
