@@ -10,3 +10,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 echo
 echo "Done!"
 echo
+docker-compose --version
