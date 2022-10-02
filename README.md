@@ -2,7 +2,7 @@
 ## Jenkins Install:
 - jenkins-linux-install.sh
 
-## Dcker Install:
+## Docker Install:
 - install-docker.sh
 - post-install-docker.sh
 - docker-compose-install.sh
